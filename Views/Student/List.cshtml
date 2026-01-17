@@ -1,0 +1,14 @@
+﻿@model IEnumerable<learningwithos.Models.StudentList>
+
+<h1>Student List</h1>
+<a asp-action="Create" asp-controller="Student">Create New</a>
+
+<hr />
+
+@foreach (var s in Model)
+{
+    <div>
+        <p>@s.Name - @s.Id</p>
+        <a asp-action="Edit" asp-route-id="@s.Id">Edit</a>
+    </div>
+}

@@ -1,0 +1,51 @@
+﻿@model learningwithos.Models.StudentView;
+
+<h1>Student Create View</h1>
+<hr />
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span> @* inline requiremnet *@
+        
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="PassingYear" class="form-label"></label>
+        <input asp-for="PassingYear" class="form-control" />
+        <span asp-validation-for="PassingYear" class="text-danger"></span>
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Age" class="form-label"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+     
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Repass" class="form-label"></label>
+        <input asp-for="Repass" class="form-control" />
+        <span asp-validation-for="Repass" class="text-danger"></span>
+
+    </div>
+
+   
+
+    <button type="submit" class="btn btn-primary">Submit it</button>
+    </form>
